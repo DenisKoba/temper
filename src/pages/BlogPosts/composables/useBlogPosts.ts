@@ -1,6 +1,6 @@
 import { ref } from 'vue';
 
-import { fetchBlogPosts, Post } from '@/core/api/fetchBlogPosts';
+import { fetchBlogPosts, BlogPost } from '@/core/api/fetchBlogPosts';
 
 export type ActionLog = {
   prevIndex: number;
@@ -8,7 +8,7 @@ export type ActionLog = {
   description: string;
 };
 
-const posts = ref<Post[]>([]);
+const posts = ref<BlogPost[]>([]);
 const logs = ref<ActionLog[]>([]);
 
 export const useBlogPosts = () => {

@@ -1,11 +1,11 @@
 import { mount } from '@vue/test-utils';
 
 import AppLoader from '@/components/ui/AppLoader.vue';
-import PostSingle from '@/pages/Posts/components/Post.vue';
-import { useBlogPosts } from '@/pages/Posts/composables/useBlogPosts';
-import PostList from '@/pages/Posts/PostList.vue';
+import PostList from '@/pages/BlogPosts/BlogPostsList.vue';
+import PostSingle from '@/pages/BlogPosts/components/Post.vue';
+import { useBlogPosts } from '@/pages/BlogPosts/composables/useBlogPosts';
 
-jest.mock('@/pages/Posts/composables/useBlogPosts', () => ({
+jest.mock('@/pages/BlogPosts/composables/useBlogPosts', () => ({
   useBlogPosts: jest.fn(() => ({
     posts: {
       value: [

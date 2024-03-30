@@ -1,11 +1,11 @@
 import { shallowMount } from '@vue/test-utils';
 
 import AppEmptyState from '@/components/ui/AppEmptyState.vue';
-import Action from '@/pages/Posts/components/Action.vue';
-import { useBlogPosts } from '@/pages/Posts/composables/useBlogPosts';
-import PostActions from '@/pages/Posts/PostActions.vue';
+import PostActions from '@/pages/BlogPosts/BlogPostActions.vue';
+import Action from '@/pages/BlogPosts/components/Action.vue';
+import { useBlogPosts } from '@/pages/BlogPosts/composables/useBlogPosts';
 
-jest.mock('@/pages/Posts/composables/useBlogPosts', () => ({
+jest.mock('@/pages/BlogPosts/composables/useBlogPosts', () => ({
   useBlogPosts: jest.fn(() => ({
     logs: [
       { description: 'Log 1' },

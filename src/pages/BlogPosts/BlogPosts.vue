@@ -13,9 +13,9 @@
 </template>
 
 <script lang="ts" setup>
-import { useBlogPosts } from '@/pages/Posts/composables/useBlogPosts';
-import PostActions from '@/pages/Posts/PostActions.vue';
-import PostList from '@/pages/Posts/PostList.vue';
+import PostActions from '@/pages/BlogPosts/BlogPostActions.vue';
+import PostList from '@/pages/BlogPosts/BlogPostsList.vue';
+import { useBlogPosts } from '@/pages/BlogPosts/composables/useBlogPosts';
 
 const { init } = useBlogPosts();
 

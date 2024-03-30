@@ -1,6 +1,6 @@
 import { shallowMount } from '@vue/test-utils';
 
-import Action from '@/pages/Posts/components/Action.vue';
+import Action from '@/pages/BlogPosts/components/Action.vue';
 
 jest.mock('@/components/ui/AppButton.vue', () => ({
   name: 'AppButton',
