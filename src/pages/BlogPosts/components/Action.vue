@@ -19,7 +19,7 @@
 
 <script setup lang="ts">
 import AppButton from '@/components/ui/AppButton.vue';
-import { ActionLog } from '@/pages/Posts/composables/useBlogPosts';
+import { ActionLog } from '@/pages/BlogPosts/composables/useBlogPosts';
 
 defineProps<{
   log: ActionLog;

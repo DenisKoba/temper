@@ -1,5 +1,5 @@
-import { fetchBlogPosts, Post } from '@/core/api/fetchBlogPosts';
-import { useBlogPosts } from '@/pages/Posts/composables/useBlogPosts';
+import { fetchBlogPosts, BlogPost } from '@/core/api/fetchBlogPosts';
+import { useBlogPosts } from '@/pages/BlogPosts/composables/useBlogPosts';
 
 jest.mock('@/core/api/fetchBlogPosts', () => ({
   fetchBlogPosts: jest.fn(() => Promise.resolve([])),
@@ -11,7 +11,7 @@ describe('useBlogPosts', () => {
   });
 
   it('initializes posts correctly on init', async () => {
-    const postsData: Post[] = [{ id: '1', title: 'Post 1' }];
+    const postsData: BlogPost[] = [{ id: '1', title: 'Post 1' }];
     (fetchBlogPosts as jest.Mock).mockResolvedValueOnce(postsData);
 
     const { posts, init } = useBlogPosts();
@@ -21,7 +21,7 @@ describe('useBlogPosts', () => {
   });
 
   it('moves a post up', () => {
-    const postsData: Post[] = [
+    const postsData: BlogPost[] = [
       { id: '1', title: 'Post 1' },
       { id: '2', title: 'Post 2' },
     ];
@@ -37,7 +37,7 @@ describe('useBlogPosts', () => {
   });
 
   it('moves a post down', () => {
-    const postsData: Post[] = [
+    const postsData: BlogPost[] = [
       { id: '1', title: 'Post 1' },
       { id: '2', title: 'Post 2' },
     ];
@@ -70,7 +70,7 @@ describe('useBlogPosts', () => {
         description: 'Moved 2 from index 1 to index 2',
       },
     ];
-    const postsData: Post[] = [
+    const postsData: BlogPost[] = [
       {
         userId: '1',
         id: '3',

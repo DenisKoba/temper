@@ -1,12 +1,12 @@
 import { get } from './index';
 
-export type Post = {
+export type BlogPost = {
   userId?: string;
   id: string;
   title?: string;
   body?: string;
 };
 
-export const fetchBlogPosts = (): Promise<Post[]> => {
-  return get<Post[]>('/posts', {}, 'https://jsonplaceholder.typicode.com');
+export const fetchBlogPosts = (): Promise<BlogPost[]> => {
+  return get<BlogPost[]>('/posts', {}, 'https://jsonplaceholder.typicode.com');
 };

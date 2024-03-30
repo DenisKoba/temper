@@ -30,13 +30,15 @@
 import { computed } from 'vue';
 
 import AppLoader from '@/components/ui/AppLoader.vue';
-import { Post } from '@/core/api/fetchBlogPosts';
-import PostSingle from '@/pages/Posts/components/Post.vue';
-import { useBlogPosts } from '@/pages/Posts/composables/useBlogPosts';
+import { BlogPost } from '@/core/api/fetchBlogPosts';
+import PostSingle from '@/pages/BlogPosts/components/Post.vue';
+import { useBlogPosts } from '@/pages/BlogPosts/composables/useBlogPosts';
 
 const { posts, moveUp, moveDown } = useBlogPosts();
 
-const shortPostsList = computed<Post[]>(() => posts.value.slice(0, 5) ?? []);
+const shortPostsList = computed<BlogPost[]>(
+  () => posts.value.slice(0, 5) ?? []
+);
 </script>
 
 <style scoped>

@@ -52,8 +52,8 @@ import {
 import { ref } from 'vue';
 
 import AppEmptyState from '@/components/ui/AppEmptyState.vue';
-import Action from '@/pages/Posts/components/Action.vue';
-import { useBlogPosts } from '@/pages/Posts/composables/useBlogPosts';
+import Action from '@/pages/BlogPosts/components/Action.vue';
+import { useBlogPosts } from '@/pages/BlogPosts/composables/useBlogPosts';
 
 const isExpanded = ref(false);
 

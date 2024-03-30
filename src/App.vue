@@ -1,7 +1,7 @@
 <template>
-  <Posts />
+  <BlogPosts />
 </template>
 
 <script lang="ts" setup>
-import Posts from '@/pages/Posts/Posts.vue';
+import BlogPosts from '@/pages/BlogPosts/BlogPosts.vue';
 </script>
