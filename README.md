@@ -1,4 +1,4 @@
-# Tempre TODO
+# Temper TODO
 The left side component (post list) should load its initial state from https://jsonplaceholder.typicode.com/posts, allow the user to update the state via manipulating the UI, and emit the list of actions committed on the right side component (list of actions committed).
 
 ## Project setup
